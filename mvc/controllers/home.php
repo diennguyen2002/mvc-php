@@ -1,12 +1,14 @@
 <?php
-    class home {
-        function sayhello($ho, $ten){
-            echo "home - hello {$ho} - {$ten}";
-            
+    class home extends controller {
+        function sayhello($so1, $so2){
+            $sv = $this->model("sinhvienModel");
+            echo $sv->tong($so1, $so2);
+
         }
 
         function show(){
-            echo "home - show";
+            $sv = $this->model("sinhvienModel");
+            echo $sv->getSV();
         }
     }
 
