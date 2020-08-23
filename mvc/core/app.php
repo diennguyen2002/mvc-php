@@ -9,8 +9,8 @@
             $arr = $this->urlProcess();
 
             // xu ly controller
-            if(file_exists("./mvc/controllers/".$arr[0].".php")){
-                $this->controller = $arr[0];
+            if(file_exists("./mvc/controllers/".$arr[0]."Controller.php")){
+                $this->controller = $arr[0].'Controller';
                 unset($arr[0]);
             }
             require_once "./mvc/controllers/".$this->controller.".php";
