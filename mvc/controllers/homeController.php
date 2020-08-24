@@ -8,10 +8,10 @@
 
         function show(){
             $sv = $this->model("sinhvien");
-            $ten = $sv->getSV();
-            $this->view("layout2", [
+            $ds = $sv->getSV();
+            $this->view("layout1", [
                 "page" => "new",
-                "ten" => $ten
+                "ds" => $ds
             ]);
         }
     }

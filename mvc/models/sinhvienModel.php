@@ -1,8 +1,9 @@
 <?php
-class sinhvienModel {
+class sinhvienModel extends db{
 
     public function getSV(){
-        return "Nguyen Van Teo";
+        $qr = "SELECT * FROM sinhvien";
+        return mysqli_query($this->con, $qr);
     }
 
     public function tong($a, $b){
